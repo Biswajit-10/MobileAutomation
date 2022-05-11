@@ -25,7 +25,6 @@ public class ServerUtils {
 	}
 	
 	public AppiumDriverLocalService stopAppiumServer() {
-		service = AppiumDriverLocalService.buildDefaultService();
 		service.stop();
 		return service;
 	}
