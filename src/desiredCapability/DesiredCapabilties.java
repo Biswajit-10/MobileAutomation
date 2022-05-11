@@ -5,26 +5,30 @@ import java.net.URL;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import io.appium.java_client.MobileDriver;
 import io.appium.java_client.android.AndroidDriver;
 
 public class DesiredCapabilties {
-
-	public void desiredCap() {
+	
+	public static MobileDriver driver;
+	
+	public static MobileDriver desiredCap(String appPackage,String appActivity) {
 
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("platformName", "Android");
 
-		capabilities.setCapability("platformVersion", "11");
-		capabilities.setCapability("automationName", "Appium");
+		capabilities.setCapability("platformVersion", "9");
+		capabilities.setCapability("automationName", "uiautomator2");
 
-		capabilities.setCapability("appPackage", "com.YONOUKMobileApp");
-		capabilities.setCapability("appActivity", "com.YONOUKMobileApp.FinacleMobileApp");
+		capabilities.setCapability("appPackage", appPackage);
+		capabilities.setCapability("appActivity", appActivity);
 		capabilities.setCapability("noReset", true);
-
+		
 		try {
-			AndroidDriver driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
+			driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
+		return driver;
 	}
 }

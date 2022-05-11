@@ -1,5 +1,6 @@
 package uiAutomator;
 
+import desiredCapability.DesiredCapabilties;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -12,8 +13,15 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
  */
 public class ScrollToElement {
 	
-	AndroidDriver<MobileElement> driver;
+	AndroidDriver<MobileElement> driver=(AndroidDriver<MobileElement>) DesiredCapabilties.driver;
 	
+	public void scroll(String attributeName,String attributeValue) {
+		
+		((AndroidDriver<MobileElement>)driver).
+		findElementByAndroidUIAutomator("new UIScrollable(new UiSelector())."
+				+ "scrollIntoView("+attributeName+"(\""+attributeValue+"\"))");
+		
+	}
 	public void scroll() {
 		
 		((AndroidDriver<MobileElement>)driver).
