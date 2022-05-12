@@ -1,0 +1,22 @@
+[
+	{
+		"name": "device1",
+		"caps": {
+			"platformName ": "iOS",
+			"platform Version ": "11.0",
+			"deviceName": "iPhone 7",
+			"automationName ": "XCUITest",
+			"app": "/path/to/my . app"
+		}
+	},
+	{
+		"name": "device2",
+		"caps": {
+			"platformName ": "i0S",
+			"platformVersion ": "11.0",
+			"deviceName": "iPhone 7",
+			"automationName": "XCUITest",
+			"app": "/path/to/my.app"
+		}
+	}
+]
