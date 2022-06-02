@@ -1,3 +1,4 @@
+
 package uiAutomator;
 
 import desiredCapability.DesiredCapabilties;
@@ -16,7 +17,7 @@ public class ScrollToElement {
 	AndroidDriver<MobileElement> driver=(AndroidDriver<MobileElement>) DesiredCapabilties.driver;
 	
 	public void scroll(String attributeName,String attributeValue) {
-		
+		driver.getContext();
 		((AndroidDriver<MobileElement>)driver).
 		findElementByAndroidUIAutomator("new UIScrollable(new UiSelector())."
 				+ "scrollIntoView("+attributeName+"(\""+attributeValue+"\"))");

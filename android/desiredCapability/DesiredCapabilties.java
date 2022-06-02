@@ -21,7 +21,7 @@ public class DesiredCapabilties {
 		capabilities.setCapability("platformVersion", "9");
 		capabilities.setCapability("automationName", "uiautomator2");
 
-		capabilities.setCapability(CapabilityType.BROWSER_NAME, "chrome");
+//		capabilities.setCapability(CapabilityType.BROWSER_NAME, "chrome");
 		capabilities.setCapability("appPackage", appPackage);
 		capabilities.setCapability("appActivity", appActivity);
 		capabilities.setCapability("deviceId", deviceId);
