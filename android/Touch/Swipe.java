@@ -1,6 +1,5 @@
 package Touch;
 
-import java.sql.DriverManager;
 import java.time.Duration;
 
 import org.openqa.selenium.Dimension;
