@@ -2,10 +2,7 @@ package excel.excelReadSpeedCheck;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.Arrays;
 
-import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -26,7 +23,7 @@ public class Speed {
 
 		book = WorkbookFactory.create(file);
 		sheet = book.getSheetAt(0);
-		short cellNum = sheet.getRow(1).getLastCellNum();
+		cellNum = sheet.getRow(1).getLastCellNum();
 	}
 	
 	public static void read() throws Throwable {
