@@ -5,7 +5,14 @@ import java.util.Scanner;
 public class InputTesting {
 	
 	public static void main(String[] args) {
-		decision();
+		try {
+		System.out.println(args[0]);
+		}catch (Exception e) {
+			args=new String[1];
+			args[0]="N";
+		}
+		System.out.println(args[0]);
+//		decision();
 	}
 	
 	public static String decision() {
