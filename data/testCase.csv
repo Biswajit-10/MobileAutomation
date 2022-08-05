@@ -1,0 +1,7 @@
+﻿step no,test step,locatorType,locatorValue,keywords,data
+1,open browser,NA,NA,LAUNCH BROWSER,Chrome
+2,launch url,NA,NA,OPEN URL,https://www.instagram.com/
+3,enter username,xpath,//input[@name='username'],SEND KEYS,cockroachoggy9@gmail.com
+4,enter password,xpath,//input[@name='password'],SEND KEYS,@Milu0987
+5,click on login Button,xpath,//button[.='Log In'],CLICK,NA
+6,close browser,NA,NA,CLOSE BROWSER,NA
