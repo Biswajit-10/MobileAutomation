@@ -32,4 +32,25 @@ public class ScreenCapture {
 	            System.err.println(ex);
 	        }
 	}
+	
+	private static byte[] pngBytesToJpgBytes(byte[] pngBytes) throws IOException {
+		//create InputStream for ImageIO using png byte[]
+		ByteArrayInputStream bais = new ByteArrayInputStream(pngBytes);
+		//read png bytes as an image
+		BufferedImage bufferedImage = ImageIO.read(bais);
+
+		BufferedImage newBufferedImage = new BufferedImage(bufferedImage.getWidth(),
+			bufferedImage.getHeight(),
+			BufferedImage.TYPE_INT_RGB);
+		newBufferedImage.createGraphics().drawImage(bufferedImage, 0, 0, Color.WHITE, null);
+
+		//create OutputStream to write prepaired jpg bytes
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		//write image as jpg bytes
+		ImageIO.write(newBufferedImage, "JPG", baos);
+
+		//convert OutputStream to a byte[]
+        return baos.toByteArray();
+    }
+	
 }
