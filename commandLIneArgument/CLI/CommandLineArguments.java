@@ -11,3 +11,7 @@ public class CommandLineArguments {
 	}
 
 }
+
+//	java CommandLineArguments Biswajit Samal
+
+//	java Cmd Value1 Value2
