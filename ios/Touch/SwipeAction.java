@@ -107,5 +107,32 @@ public class SwipeAction {
 	        return;
 	    }
 	}
+	/**
+	 * Performs screen scroll down direction Until element is visible
+	 **/
+	public void swipeUntilElementVisible(String locatorStrategy,String locatorValue ) {
+	JavascriptExecutor js = (JavascriptExecutor) BaseTest.driver;
+	Map<String, Object> params = new HashMap<String, Object>();
+	params.put("direction", "down");
+	switch (locatorStrategy.toLowerCase()) {
+	case "id":
+		params.put("id",locatorValue);
+		break;
+
+	case "name":
+		params.put("name",locatorValue);
+		break;
+
+	case "xpath":
+		params.put("xpath",locatorValue);
+		break;
+
+	default:
+		break;
+	}
+
+	js.executeScript("mobile: scroll", params);
+
+}
 	
 }
